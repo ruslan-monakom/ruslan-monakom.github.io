@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&family=Noto+Sans+Khojki&family=Prata&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eb51a8a394.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div>
+            <!-- <h2>HELLO</h2> -->
+            <div class="loader"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <h1>Ukraine</h1>
+
+    <div class="container">
+
+        <!-- перший рядок -->
+        <div class="row align-items-center  my-5">
+            <div class="col-md-6">
+                <h4>Львів </h4>
+                <p>Львів - це місто на заході України, адміністративний центр Львівської області та Львівської міської
+                    громади.
+                    Засноване в середині XIII століття князем Данилом Романовичем, місто має багату історію та культурну
+                    спадщину.</p>
+                <h4>Історія</h4>
+                <p>Львів був заснований у 1256 році і названий на честь сина князя Данила Галицького — Льва. Протягом
+                    століть місто було під владою різних держав, включаючи Польщу, Австро-Угорщину, Російську імперію та
+                    Радянський Союз. Ця багатокультурна історія відобразилася у архітектурі та культурному житті Львова.
+                </p>
+                <h4>Культура та архітектура</h4>
+                <p>Львів славиться своєю добре збереженою середньовічною архітектурою. Центр міста занесений до списку
+                    всесвітньої спадщини ЮНЕСКО. Серед відомих пам'яток — Площа Ринок, Латинський кафедральний собор,
+                    Вірменський квартал, Оперний театр та Високий замок.
+
+                    Місто є культурним центром Західної України. У Львові знаходяться численні музеї, театри, галереї та
+                    концертні зали. Також тут проводяться відомі фестивалі, такі як Львівський міжнародний літературний
+                    фестиваль, ДжазФест та багато інших.</p>
+
+            </div>
+            <div class="col-md-6"><img src="lviv.jpg" alt=""></div>
+        </div>
+
+        <!-- другий рядок -->
+        <div class="row align-items-center  my-5">
+
+
+
+
+
+
+
+
+            <div class="col-md-4"><img src="ukraine'jpeg.jpg" alt=""></div>
+            <div class="col-md-8">
+                <h4>Київ</h4>
+                <p>Київ — це столиця та найбільше місто України, адміністративний центр Київської області (місто
+                    обласного
+                    значення) та окремої адміністративної одиниці. Місто розташоване на берегах річки Дніпро, має багату
+                    історію, що налічує понад 1400 років, і є важливим культурним, політичним, науковим та економічним
+                    центром країни.</p>
+                <h4>Історія</h4>
+                <p>Київ був заснований у кінці V - початку VI століття і став важливим центром Східної Європи. За
+                    легендою,
+                    місто було засноване трьома братами Кийом, Щеком і Хоривом та їхньою сестрою Либіддю. У X-XIII
+                    століттях
+                    Київ був столицею Київської Русі — однієї з наймогутніших держав того часу. Після монгольської
+                    навали
+                    1240 року місто втратило своє значення, але згодом відродилося під владою Великого князівства
+                    Литовського, Речі Посполитої та Російської імперії.</p>
+                <h4>Культура та архітектура</h4>
+                <p>Київ славиться своєю багатою культурною спадщиною і численними архітектурними пам'ятками. Одні з
+                    найвідоміших пам'яток — Києво-Печерська лавра та Софійський собор, які входять до списку всесвітньої
+                    спадщини ЮНЕСКО. Інші важливі місця включають Золоті ворота, Андріївську церкву, Маріїнський палац
+                    та
+                    Володимирський собор.
+
+                    Місто також є центром культурного життя України. Тут знаходяться численні театри, музеї, галереї та
+                    концертні зали. Відомі театри включають Національний академічний театр опери та балету України імені
+                    Тараса Шевченка, Національний драматичний театр імені Івана Франка та інші.</p>
+
+            </div>
+        </div>
+
+
+        <!-- третій рядок -->
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Частина з джава скриптом -->
+    <div class="container" id="vue-cont">
+        <h2>Цікаві місця України</h2>
+        <div class="car-name">
+            <ul class="car-name-list">
+                <li v-for="(item, index) in cars" v-on:click="showCar(index)"
+                    v-bind:class="{active: currentIndex ==  index}" class="list-item">
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="car-wrap">
+            <div class="car-about">
+                <div class="car-img">
+                    <img v-bind:src="currentCar.image" alt="">
+                </div>
+                <div class="car-info">
+                    <div class="name">Назва: {{currentCar.name}}</div>
+                    <div class="model">Площа: {{currentCar.model}}</div>
+                    <div class="color">Довжина: {{currentCar.color}}</div>
+                    <div class="year">Континент: {{currentCar.year}}</div>
+                    <div class="price">Місцерозташування: {{currentCar.price}} </div>
+                    <!-- <div class="name">Регіон: {{currentCar.name}}</div>      -->
+                    <div class="regin">Регіон: {{currentCar.regin}}</div>
+                </div>
+            </div>
+            <div class="car-text">
+                {{currentCar.about}}
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto">
+                    <p>Сторінка розроблена Судоргіним Русланом 2024</p>
+                </div>
+                <div class="col-md-auto">
+                    <a href="https://youtube.com/@yt_banibell?si=3X2xjCkRCJ9vCq67" class="socio youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqbS1oYzJGakpXWnRNakRXWnl5VXRaMFp5Q2JVQXxBQ3Jtc0ttYl9peVFQMmVtMVRuc3dNcWpvajRPbm5fQ0RhYjFiQ21GT1FYZ1FuWU91UGRHRDBXSzN1dzVlLUpvY2RDMkcwaWdHV21QVzZaajd4U1QxTFE1ZEtOOURDX1BaaVpjWkp1SDV6XzVQNlJ2OTdjUGhfZw&q=https%3A%2F%2Ft.me%2FYT_BaniBell"
+                        class="socio telegram"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"> </script>
+</body>
+
+</html>
