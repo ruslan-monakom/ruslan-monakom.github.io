@@ -1,0 +1,142 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:gold;
+}
+
+h1 {
+    text-align: center;
+    color: aqua;
+    text-shadow: 0px 0px 1px black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "Prata", serif;
+
+}
+h2{
+    text-align: center;
+    font-family: "Prata", serif;
+
+}
+img {
+    width: 100%;
+}
+
+.list-item {
+    background-color: #d5d5d5;
+    margin: 15px;
+    padding: 20px;
+
+}
+
+.list-item:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: aqua;
+    color: rgb(110, 110, 110);
+}
+
+.car-name-list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.car-about {
+    display: flex;
+    margin: 15px;
+
+}
+
+.car-img {
+    width: 50%;
+    margin-right: 30px;
+}
+
+.car-info div {
+    margin: 10px 0;
+}
+@media (max-width: 768px) {
+    .car-about {
+        flex-direction: column;
+    }
+
+    .car-img {
+        width:  100%;
+        margin-right: 10px;
+    }
+
+    .car-info div {
+        margin: 10px 0;
+    }
+
+
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    transition: 1.8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    position:relative;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffb940;    
+    box-shadow: 0 0 0 50px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .loader:after {
+    animation: l5 1s infinite;
+    transform: perspective(300px) translateZ(0px)
+  }
+  @keyframes l5 {
+    to {transform:perspective(300px) translateZ(150px);opacity:0}
+  }
+ 
+ 
+h4{
+    text-align: center;
+    border-bottom: 1px solid rgb(139, 98, 0);
+    padding-bottom: 10px;
+    font-family: "Roboto Slab", serif;
+
+
+}
+footer{
+    background-color: rgb(43, 43, 43);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    color: #d5d5d5;
+}
+.socio{
+    color: rgb(193, 193, 193);
+    text-decoration: none;
+    margin-right: 10px;
+    font-size:2em;
+}
+footer .row{
+    justify-content: space-between;
+    align-items: center;
+}
+.youtube:hover{
+    color: red;
+}
